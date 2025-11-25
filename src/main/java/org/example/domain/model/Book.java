@@ -17,7 +17,7 @@ public class Book {
         this.isbn = isbn;
         this.title = title;
         this.basePrice = basePrice;
-        this.discountPercentage = discountPercentage;
+        this.discountPercentage = discountPercentage.min(BigDecimal.valueOf(100)).max(BigDecimal.ZERO);
         this.price = calculateFinalPrice();
     }
 

@@ -20,6 +20,7 @@ public class BookMapper {
         if (book == null) {
             return null;
         }
+
         return new BookDto(
                 book.getId(),
                 book.getIsbn(),
@@ -34,6 +35,7 @@ public class BookMapper {
         if (bookDto == null) {
             return null;
         }
+
         return new Book(
                 bookDto.id(),
                 bookDto.isbn(),
